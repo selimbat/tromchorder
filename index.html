@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tromchorder</title>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg
+      id="slide-grid"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      width="640"
+      height="450"
+      viewBox="0 0 640 450"
+      xml:space="preserve"
+      style="display: block"
+    >
+      <desc>Copyright Selim Tirellil</desc>
+      <defs>
+        <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="wheat" />
+          <stop offset="100%" stop-color="salmon" />
+        </linearGradient>
+      </defs>
+      <g id="original-note" transform="matrix(1 0 0 1 114 390)">
+        <circle
+          style="stroke: rgb(0, 0, 0); stroke-width: 2; fill: none"
+          cx="20"
+          cy="0"
+          r="20"
+        />
+        <text x="10" y="5">B♭</text>
+        <line
+          style="stroke: rgb(0, 0, 0); stroke-width: 3"
+          x1="-30"
+          y1="0"
+          x2="0"
+          y2="0"
+        />
+      </g>
+    </svg>
+
+    <div style="display: flex; flex-wrap: wrap">
+      <div style="margin: 1rem 1rem 0 0">
+        <label style="color: salmon">Chord 1:</label>
+        <select id="note1" onchange="updateSvg()">
+          <option value="C">C</option>
+          <option value="D♭">D♭/C#</option>
+          <option value="D">D</option>
+          <option value="E♭">E♭/D#</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G♭">G♭/F#</option>
+          <option value="G">G</option>
+          <option value="A♭">A♭/G#</option>
+          <option value="A">A</option>
+          <option value="B♭">B♭/A#</option>
+          <option value="B">B</option>
+        </select>
+        <select id="chordQuality1" onchange="updateSvg()">
+          <option value="M">Major triad</option>
+          <option value="m">Minor triad</option>
+          <option value="dim">Diminished triad</option>
+          <option value="aug">Augmented triad</option>
+          <option value="seventh">Seventh chord</option>
+          <option value="maj7">Major seventh chord</option>
+          <option value="min7">Minor seventh chord</option>
+          <option value="half-dim">Half-diminished chord</option>
+        </select>
+      </div>
+      <div style="margin-top: 1rem">
+        <label style="color: wheat">Chord 2:</label>
+        <select id="note2" onchange="updateSvg()">
+          <option value="none">None</option>
+          <option value="C">C</option>
+          <option value="D♭">D♭/C#</option>
+          <option value="D">D</option>
+          <option value="E♭">E♭/D#</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G♭">G♭/F#</option>
+          <option value="G">G</option>
+          <option value="A♭">A♭/G#</option>
+          <option value="A">A</option>
+          <option value="B♭">B♭/A#</option>
+          <option value="B">B</option>
+        </select>
+        <select id="chordQuality2" onchange="updateSvg()">
+          <option value="M">Major triad</option>
+          <option value="m">Minor triad</option>
+          <option value="dim">Diminished triad</option>
+          <option value="aug">Augmented triad</option>
+          <option value="seventh">Seventh chord</option>
+          <option value="maj7">Major seventh chord</option>
+          <option value="min7">Minor seventh chord</option>
+          <option value="half-dim">Half-diminished chord</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
